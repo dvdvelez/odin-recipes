@@ -7,5 +7,8 @@ Also, I plan to learn the basics of add, commit, and push git commands.
 <!--Editing: Adding the information below to readme-->
 I am editing the readme file to see the changes in github.
 
-<!--Editing:  Further editing readme file-->
+<!--Editing: Further editing readme file-->
 I am further editing the readme file to continue practicing git commit messages.
+
+<!--Editing: One last edit to the readme file-->
+This is one last edit to the readme file...for now!
