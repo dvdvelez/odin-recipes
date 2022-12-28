@@ -25,9 +25,19 @@ header {
     font-family: z003, loma, sans-serif;
 }
 
-.logo {
+a {
+    text-decoration: none;
+}
 
-    font-size: 36px;
+.logo {
+    display: flex;
+    font-size: 48px;
+}
+
+nav {
+    display: flex;
+    font-size: 30px;
+    gap: 30px;
 }
 
 main, footer {
