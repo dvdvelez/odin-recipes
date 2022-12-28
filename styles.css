@@ -45,9 +45,23 @@ nav {
 
 
 /*********** MAIN ******************************************************/
-main {
-    font-family: Loma, sans-serif;
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    font-style: z003, Loma, sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
+.welcome_text {
+    width: 500px;
+    height: 250px;
+}
 
+.welcome_video {
+    width: 500px;
+    height: 250px;
+}
 /*********** FOOTER ******************************************************/
