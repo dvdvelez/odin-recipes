@@ -1,11 +1,38 @@
-* {background-color: bisque;}
-
-main, footer {font-family: Loma, sans-serif;}
-
-nav {
-    font-family: serif, sans-serif;
-    font-size: 20px;
+/*.webpage {
+    display: flex;
+    align-items: center;
     }
+    */
+
+.background{
+    background-image: url(burger_background.jpg);
+    background-size: 1000px;
+    background-repeat: no-repeat;  /*This is to prevent the image from being repeated in tiles over and over*/
+    background-position: center;
+}
+
+body {
+    width: 1366px;
+    margin: auto;
+    padding: 20px;
+    background-color: black;
+    color: rgb(250, 230, 50);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: z003, loma, sans-serif;
+}
+
+.logo {
+
+    font-size: 36px;
+}
+
+main, footer {
+    font-family: Loma, sans-serif;
+}
 
 .ingr-color {color: blue;}
 
