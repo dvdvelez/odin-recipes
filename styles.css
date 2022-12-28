@@ -85,6 +85,15 @@ iframe {
     height: 250px;
 }
 
+.burgers {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(250, 150, 0);
+}
+
 /*********** FOOTER ******************************************************/
 
 
