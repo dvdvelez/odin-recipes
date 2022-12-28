@@ -25,6 +25,10 @@ header {
     display: flex;
     justify-content: space-between;
     font-family: z003, loma, sans-serif;
+    padding: 50px;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(250, 150, 0);
 }
 
 a {
@@ -34,13 +38,14 @@ a {
 
 .logo {
     display: flex;
-    font-size: 48px;
+    font-size: 50px;
 }
 
 nav {
     display: flex;
     font-size: 30px;
     gap: 30px;
+    align-items: center;
 }
 
 
@@ -50,10 +55,7 @@ nav {
     justify-content:space-evenly;
     font-style: z003, Loma, sans-serif;
     font-size:x-large;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
     border-style: ridge;
     border-width: 10px;
     border-color: rgb(250, 150, 0);
