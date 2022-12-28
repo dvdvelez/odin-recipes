@@ -19,6 +19,8 @@ body {
     color: rgb(250, 230, 50);
 }
 
+
+/*********** HEADER ******************************************************/
 header {
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,7 @@ header {
 }
 
 a {
+    color: rgb(250, 150, 0);
     text-decoration: none;
 }
 
@@ -40,10 +43,11 @@ nav {
     gap: 30px;
 }
 
-main, footer {
+
+/*********** MAIN ******************************************************/
+main {
     font-family: Loma, sans-serif;
 }
 
-.ingr-color {color: blue;}
 
-.instr-color {color:brown;}
+/*********** FOOTER ******************************************************/
