@@ -47,21 +47,45 @@ nav {
 /*********** MAIN ******************************************************/
 .welcome {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     font-style: z003, Loma, sans-serif;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(250, 150, 0);
 }
 
 .welcome_text {
     width: 500px;
     height: 250px;
+    padding: 30px;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: rgb(250, 230, 50);
 }
 
 .welcome_video {
     width: 500px;
     height: 250px;
+    padding: 30px;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: rgb(250, 230, 50);
 }
+
+iframe {
+    width: 500px;
+    height: 250px;
+}
+
 /*********** FOOTER ******************************************************/
+
+
+
+
+
+
+
