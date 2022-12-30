@@ -5,7 +5,7 @@
     */
 
 .background{
-    background-image: url(burger_background.jpg);
+    background-image: url(images/burger_background.jpg);
     background-size: 1000px;
     background-repeat: no-repeat;  /*This is to prevent the image from being repeated in tiles over and over*/
     background-position: center;
