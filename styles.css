@@ -45,6 +45,8 @@ nav {
 
 
 /*********** MAIN ******************************************************/
+
+/*********** Welcome Section ***********/
 .welcome {
     display: flex;
     justify-content:space-evenly;
@@ -77,8 +79,11 @@ nav {
 iframe {
     width: 500px;
     height: 250px;
+    /*iframe is used to set the actual size of the embedded video.
+    Note--the dimensions of .welcome_video class above specify the dimensions of the CONTAINER itself and NOT of the actual embedded video.*/
 }
 
+/*********** Burger Links Section ***********/
 .burgers {
     display: flex;
     justify-content: space-evenly;
