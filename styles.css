@@ -1,9 +1,3 @@
-/*.webpage {
-    display: flex;
-    align-items: center;
-    }
-    */
-
 .background{
     background-image: url(images/burger_background.jpg);
     background-size: 1000px;
@@ -93,6 +87,57 @@ iframe {
     border-width: 10px;
     border-color: rgb(250, 150, 0);
 }
+
+.beef, .chicken, .veggie {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+}
+
+.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(images/burger_icons.jpg);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.burger_icon_beef, .beef_text {
+    color: rgb(250, 150, 0);
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    border-color: rgb(250, 150, 0);
+    border-style: ridge;
+    border-width: 2px;
+    /*Since both .burger_icon_beef and .beef_text are inside .beef container AND you have specified the dimensions for .burger_icon_beef, the WIDTH for .beef_text is set to the same width as .burger_icon_beef by default since you have not specified its dimensions. The HEIGHT of .beef_text is set to the default padding of any text within a container (div class) as usual. The above is applied for .chicken_text and .veggie_text as well.*/
+}
+
+.burger_icon_chicken, .chicken_text {
+    color: rgb(250, 230, 50);
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    border-color: rgb(250, 230, 50);
+    border-style: ridge;
+    border-width: 2px;
+}
+
+.burger_icon_veggie, .veggie_text {
+    color: rgb(100, 250, 0);
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    border-color: rgb(100, 250, 0);
+    border-style: ridge;
+    border-width: 2px;
+}
+
+
+
 
 /*********** FOOTER ******************************************************/
 
