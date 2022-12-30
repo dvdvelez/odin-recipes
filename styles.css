@@ -32,7 +32,8 @@ a {
 
 .logo {
     display: flex;
-    font-size: 50px;
+    font-size: 55px;
+    font-weight: 700;
 }
 
 nav {
