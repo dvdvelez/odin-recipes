@@ -12,3 +12,6 @@ I am further editing the readme file to continue practicing git commit messages.
 
 <!--Editing: One last edit to the readme file-->
 This is one last edit to the readme file...for now!
+
+<!--Editing: Re-editing and changing original webpage-->
+After learning CSS basics and fundamentals, I have decided to completely change my recipes webpage to focus on different types of burger recipes.
