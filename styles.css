@@ -1,16 +1,16 @@
-.background{
-    background-image: url(images/burger_background.jpg);
-    background-size: 1000px;
-    background-repeat: no-repeat;  /*This is to prevent the image from being repeated in tiles over and over*/
-    background-position: center;
-}
-
 body {
     width: 1366px;
     margin: auto;
     padding: 20px;
     background-color: black;
     color: rgb(250, 230, 50);
+}
+
+.background {
+    background-image: url(images/burger_background.jpg);
+    background-size: 1000px;
+    background-repeat: no-repeat;  /*This is to prevent the image from being repeated in tiles over and over*/
+    background-position: center;
 }
 
 
@@ -23,6 +23,7 @@ header {
     border-style: ridge;
     border-width: 10px;
     border-color: rgb(250, 150, 0);
+    backdrop-filter: blur(4px);
 }
 
 a {
@@ -51,12 +52,12 @@ nav {
 .welcome {
     display: flex;
     justify-content:space-evenly;
-    font-style: z003, Loma, sans-serif;
-    font-size:x-large;
+    font-size: x-large;
     padding: 50px;
     border-style: ridge;
     border-width: 10px;
     border-color: rgb(250, 150, 0);
+    backdrop-filter: blur(4px);
 }
 
 .welcome_text {
@@ -92,6 +93,7 @@ iframe {
     border-style: ridge;
     border-width: 10px;
     border-color: rgb(250, 150, 0);
+    backdrop-filter: blur(4px);
 }
 
 .beef, .chicken, .veggie {
@@ -143,9 +145,18 @@ iframe {
 }
 
 
-
-
 /*********** FOOTER ******************************************************/
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    backdrop-filter: blur(4px);
+}
+
 .credits_text {
     font-size: 24px;
 }
