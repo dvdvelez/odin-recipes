@@ -146,9 +146,13 @@ iframe {
 
 
 /*********** FOOTER ******************************************************/
+.credits_text {
+    font-size: 24px;
+}
 
-
-
+.credits_links {
+    font-size: 20px;
+}
 
 
 
