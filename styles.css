@@ -100,6 +100,7 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-items: space-around;
+    position: relative;
 }
 
 .burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
@@ -107,11 +108,25 @@ iframe {
     height: 200px;
     margin: 0px;
     padding: 0px;
-    background-image: url(images/burger_icons.jpg);
-    background-size: 200px;
-    background-repeat: no-repeat;
-    background-position: center;
+    /* To create the blurred effect ONLY on the burger image when hovering over it I had to apply the image and make it a child of .beef, .chicken, and .veggie in index.html instead of here.*/
 }
+
+.beef_dropdown, .chicken_dropdown, .veggie_dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    /* Display is set to "none" so that by default .beef_dropdown is hidden and unseen. It becomes visible the moment you hover over .beef, .chicken, and .veggie respectively*/
+}
+
+.beef:hover .beef_dropdown, .chicken:hover .chicken_dropdown, .veggie:hover .veggie_dropdown {
+    display: block;
+    /* Hover attribute has to be applied to .beef and .beef_drowpdown so that both can be seen whenever you hover over .beef. Then, to blur the burger image you have to blur specifically .burger_icon_beef by itself so that you  DO NOT blur .beef_dropdown.*/}
+
+.burger_icon_beef:hover, .burger_icon_chicken:hover, .burger_icon_veggie:hover {
+    filter: blur(3px);
+}
+
 
 .burger_icon_beef, .beef_text {
     color: rgb(250, 150, 0);
