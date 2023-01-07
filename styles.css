@@ -60,16 +60,7 @@ nav {
     backdrop-filter: blur(4px);
 }
 
-.welcome_text {
-    width: 500px;
-    height: 250px;
-    padding: 30px;
-    border-style: ridge;
-    border-width: 5px;
-    border-color: rgb(250, 230, 50);
-}
-
-.welcome_video {
+.welcome_text, .welcome_video {
     width: 500px;
     height: 250px;
     padding: 30px;
@@ -103,45 +94,38 @@ iframe {
     position: relative;
 }
 
-.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
+.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie, .beef_text, .chicken_text, .veggie_text {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 200px;
-    height: 200px;
     margin: 0px;
     padding: 0px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
+    height: 200px;
+    /*The height of the text containers is set at the default height/padding of the font-size above*/
 }
 
 .burger_icon_beef, .beef_text {
     color: rgb(250, 150, 0);
-    text-align: center;
-    font-size: x-large;
-    font-weight: 900;
     border-color: rgb(250, 150, 0);
-    border-style: ridge;
-    border-width: 2px;
-    /*Since both .burger_icon_beef and .beef_text are inside .beef container AND you have specified the dimensions for .burger_icon_beef, the WIDTH for .beef_text is set to the same width as .burger_icon_beef by default since you have not specified its dimensions. The HEIGHT of .beef_text is set to the default padding of any text within a container (div class) as usual. The above is applied for .chicken_text and .veggie_text as well.*/
 }
 
 .burger_icon_chicken, .chicken_text {
     color: rgb(250, 230, 50);
-    text-align: center;
-    font-size: x-large;
-    font-weight: 900;
     border-color: rgb(250, 230, 50);
-    border-style: ridge;
-    border-width: 2px;
 }
 
 .burger_icon_veggie, .veggie_text {
     color: rgb(100, 250, 0);
-    text-align: center;
-    font-size: x-large;
-    font-weight: 900;
     border-color: rgb(100, 250, 0);
-    border-style: ridge;
-    border-width: 2px;
 }
 
 .beef_dropdown, .chicken_dropdown, .veggie_dropdown {
