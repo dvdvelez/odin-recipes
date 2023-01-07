@@ -145,17 +145,27 @@ iframe {
 .beef_dropdown, .chicken_dropdown, .veggie_dropdown {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: red;
     z-index: 1;
+    width: 190px;
+    height: 190px;
     /* Display is set to "none" so that by default .beef_dropdown is hidden and unseen. It becomes visible the moment you hover over .beef, .chicken, and .veggie respectively*/
+}
+
+.drp_beef_links, .drp_chicken_links, .drp_veggie_links {
+    display: flex;
+    margin: auto;
+    justify-self: center;
+    align-self: center;
+    padding: 10px;
+    background-color: aquamarine;
+    width: 160px;
+    height: 160px;
 }
 
 .beef:hover .beef_dropdown, .chicken:hover .chicken_dropdown, .veggie:hover .veggie_dropdown {
     display: block;
-    /* Hover attribute has to be applied to .beef and .beef_drowpdown so that both can be seen whenever you hover over .beef. Then, to blur the burger image you have to blur specifically .burger_icon_beef by itself so that you  DO NOT blur .beef_dropdown.*/}
-
-.burger_icon_beef:hover, .burger_icon_chicken:hover, .burger_icon_veggie:hover {
-    filter: blur(3px);
+    /* Hover attribute has to be applied to .beef and .beef_drowpdown so that both can be seen whenever you hover over .beef. Then, to blur the burger image you have to blur specifically .burger_icon_beef by itself so that you  DO NOT blur .beef_dropdown.*/
 }
 
 
