@@ -23,7 +23,7 @@ header {
     border-style: ridge;
     border-width: 10px;
     border-color: rgb(250, 150, 0);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
 }
 
 a {
@@ -57,7 +57,7 @@ nav {
     border-style: ridge;
     border-width: 10px;
     border-color: rgb(250, 150, 0);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
 }
 
 .welcome_text, .welcome_video {
@@ -84,7 +84,7 @@ iframe {
     border-style: ridge;
     border-width: 10px;
     border-color: rgb(250, 150, 0);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
 }
 
 .beef, .chicken, .veggie {
