@@ -98,7 +98,7 @@ iframe {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 200px;
+    width: 300px;
     margin: 0px;
     padding: 0px;
     text-align: center;
@@ -109,7 +109,7 @@ iframe {
 }
 
 .burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
-    height: 200px;
+    height: 300px;
     /*The height of the text containers is set at the default height/padding of the font-size above*/
 }
 
@@ -140,9 +140,13 @@ iframe {
     flex-direction: column;
     margin: auto;
     align-items: center;
-    width: 170px;
-    height: 170px;
+    width: 270px;
+    height: 270px;
     backdrop-filter: blur(10px);
+    justify-content: space-around;
+    gap: 10px;
+    
+    
     overflow-wrap: anywhere; /*This is in case the link names get too long*/
 }
 
