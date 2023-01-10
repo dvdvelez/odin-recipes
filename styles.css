@@ -145,8 +145,6 @@ iframe {
     backdrop-filter: blur(10px);
     justify-content: space-around;
     gap: 10px;
-    
-    
     overflow-wrap: anywhere; /*This is in case the link names get too long*/
 }
 
@@ -175,7 +173,3 @@ footer {
 .credits_links {
     font-size: 20px;
 }
-
-
-
-
