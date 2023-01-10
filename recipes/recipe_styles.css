@@ -49,7 +49,7 @@ nav {
 /*********** MAIN ******************************************************/
 
 /*********** Welcome Section ***********/
-.welcome {
+.recipes_zone {
     display: flex;
     justify-content: space-evenly;
     font-size: x-large;
@@ -60,99 +60,33 @@ nav {
     backdrop-filter: blur(5px);
 }
 
-.welcome_text, .welcome_video {
-    width: 500px;
-    height: 250px;
+.recipe_text, .recipe_links {
+    height: auto;
     padding: 30px;
     border-style: ridge;
     border-width: 5px;
     border-color: rgb(250, 230, 50);
+    overflow-wrap: anywhere;
 }
 
-iframe {
-    width: 500px;
-    height: 250px;
-    /*iframe is used to set the actual size of the embedded video.
-    Note--the dimensions of .welcome_video class above specify the dimensions of the CONTAINER itself and NOT of the actual embedded video.*/
+.recipe_text {
+    width: 700px;
 }
 
-/*********** Burger Links Section ***********/
-.burgers {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 30px;
-    border-style: ridge;
-    border-width: 10px;
-    border-color: rgb(250, 150, 0);
-    backdrop-filter: blur(5px);
-}
-
-.beef, .chicken, .veggie {
-    display: flex;
-    flex-direction: column;
-    justify-items: space-around;
-    position: relative;
-}
-
-.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie, .beef_text, .chicken_text, .veggie_text {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.recipe_links {
     width: 300px;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    font-size: x-large;
-    font-weight: 900;
-    border-style: ridge;
-    border-width: 2px;
 }
 
-.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
-    height: 300px;
-    /*The height of the text containers is set at the default height/padding of the font-size above*/
-}
-
-.burger_icon_beef, .beef_text {
-    color: rgb(250, 150, 0);
-    border-color: rgb(250, 150, 0);
-}
-
-.burger_icon_chicken, .chicken_text {
-    color: rgb(250, 230, 50);
-    border-color: rgb(250, 230, 50);
-}
-
-.burger_icon_veggie, .veggie_text {
-    color: rgb(100, 250, 0);
-    border-color: rgb(100, 250, 0);
-}
-
-.beef_dropdown, .chicken_dropdown, .veggie_dropdown {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    /* Display is set to "none" so that by default .beef_dropdown is hidden and unseen. It becomes visible the moment you hover over .beef, .chicken, and .veggie respectively*/
-}
-
-.drp_beef_links, .drp_chicken_links, .drp_veggie_links {
+.beef_links, .chicken_links, .veggie_links {
     display: flex;
     flex-direction: column;
     margin: auto;
     align-items: center;
-    width: 270px;
-    height: 270px;
+    
     backdrop-filter: blur(10px);
     justify-content: space-around;
     gap: 10px;
-    
-    
     overflow-wrap: anywhere; /*This is in case the link names get too long*/
-}
-
-.beef:hover .beef_dropdown, .chicken:hover .chicken_dropdown, .veggie:hover .veggie_dropdown {
-    display: flex;
-    /* Hover attribute has to be applied to .beef and .beef_drowpdown so that both can be seen whenever you hover over .beef.*/
 }
 
 
