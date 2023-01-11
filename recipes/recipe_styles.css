@@ -92,6 +92,10 @@ nav {
     
 }
 
+.recipe_text {
+    font-size: x-large;
+}
+
 .beef_links, .chicken_links, .veggie_links {
     display: flex;
     flex-direction: column;
