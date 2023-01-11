@@ -60,7 +60,7 @@ nav {
     backdrop-filter: blur(5px);
 }
 
-.recipe_text, .recipe_links {
+.recipe_content, .recipe_links {
     height: auto;
     padding: 30px;
     border-style: ridge;
@@ -69,7 +69,7 @@ nav {
     overflow-wrap: anywhere;
 }
 
-.recipe_text {
+.recipe_content {
     width: 700px;
 }
 
