@@ -24,6 +24,9 @@ header {
     border-width: 10px;
     border-color: rgb(250, 150, 0);
     backdrop-filter: blur(5px);
+    background-image: url(../images/flame_header_background.jpg);
+    background-size: 260px;
+    background-position: center;
 }
 
 a {
