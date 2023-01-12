@@ -26,7 +26,8 @@ header {
     backdrop-filter: blur(5px);
     background-image: url(../images/flame_header_background.jpg);
     background-size: 260px;
-    background-position: center;
+    background-position: bottom;
+    background-repeat: repeat-x; /*This is to repeat image horizontally*/
 }
 
 a {
