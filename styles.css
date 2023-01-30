@@ -170,10 +170,20 @@ footer {
     backdrop-filter: blur(4px);
 }
 
+
+/*********** CREDITS ******************************************************/
+
 .credits_text {
     font-size: 24px;
 }
 
 .credits_links {
     font-size: 20px;
+}
+
+
+/*********** ABOUT ME ******************************************************/
+
+.about_text {
+    font-size: 24px;
 }
