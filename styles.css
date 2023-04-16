@@ -1,52 +1,48 @@
+/*********** UNIVERSAL RULES ******************************************************/
 body {
     width: 1366px;
     margin: auto;
     padding: 20px;
-    background-color: black;
-    color: rgb(250, 230, 50);
+    background: black;
+    font-family: Lato, sans-serif;
 }
 
-.background {
-    background-image: url(images/burger_background.jpg);
-    background-size: 1000px;
-    background-repeat: no-repeat;  /*This is to prevent the image from being repeated in tiles over and over*/
-    background-position: center;
+a:link, a:visited {
+    text-decoration: none;
+    color: rgb(250, 150, 0);
+}
+
+a:hover {
+    color: rgb(250, 230, 50);
 }
 
 
 /*********** HEADER ******************************************************/
 header {
-    display: flex;
-    justify-content: space-between;
-    font-family: z003, loma, sans-serif;
-    padding: 50px;
-    border-style: ridge;
-    border-width: 10px;
-    border-color: rgb(250, 150, 0);
-    backdrop-filter: blur(5px);
-    background-image: url(images/flame_header_background.jpg);
-    background-size: 260px;
-    background-position: bottom;
-    background-repeat: repeat-x; /*This is to repeat image horizontally*/
-}
-
-a {
-    color: rgb(250, 150, 0);
-    text-decoration: none;
+    border: ridge 10px rgb(250, 150, 0);
+    background: url(images/flame_header_background.jpg) bottom repeat-x;
+    /* "repeat-x" is to repeat image horizontally*/
+    background-size: 400px;
 }
 
 .logo {
-    display: flex;
-    font-size: 55px;
+    margin: 20px 20px 5px;
+    font: 65px "Uncial Antiqua", sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+span {
+    font: 55px Shrikhand, sans-serif;
     font-weight: 700;
 }
 
 nav {
     display: flex;
-    font-size: 30px;
-    gap: 30px;
-    align-items: center;
-    justify-items: end;
+    justify-content: space-between;
+    margin: 0 20px 65px;
+    font: 40px Shrikhand, sans-serif;
 }
 
 
@@ -56,21 +52,17 @@ nav {
 .welcome {
     display: flex;
     justify-content: space-evenly;
-    font-size: x-large;
     padding: 50px;
-    border-style: ridge;
-    border-width: 10px;
-    border-color: rgb(250, 150, 0);
-    backdrop-filter: blur(5px);
+    border: ridge 10px rgb(250, 150, 0);
 }
 
 .welcome_text, .welcome_video {
+    font-size: 30px;
     width: 500px;
     height: 250px;
     padding: 30px;
-    border-style: ridge;
-    border-width: 5px;
-    border-color: rgb(250, 230, 50);
+    border: ridge 5px rgb(250, 150, 0);
+    background-color: rgb(250, 230, 50);
 }
 
 iframe {
@@ -83,91 +75,87 @@ iframe {
 /*********** Burger Links Section ***********/
 .burgers {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 30px;
-    border-style: ridge;
-    border-width: 10px;
-    border-color: rgb(250, 150, 0);
-    backdrop-filter: blur(5px);
+    border: ridge 10px rgb(250, 150, 0);
+    font-size: 25px;
 }
 
 .beef, .chicken, .veggie {
     display: flex;
     flex-direction: column;
-    justify-items: space-around;
-    position: relative;
-}
-
-.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie, .beef_text, .chicken_text, .veggie_text {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 300px;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    font-size: x-large;
-    font-weight: 900;
-    border-style: ridge;
-    border-width: 2px;
+    border-radius: 50%;
 }
 
 .burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
-    height: 300px;
-    /*The height of the text containers is set at the default height/padding of the font-size above*/
+    display: flex;
+    justify-content: center; /*This is to center the links container within the icon itself*/
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    font-weight: 900;
+    /*border: solid 2px;*/
+    background: url(images/beef_icon.jpg) no-repeat;
+    background-size: cover;
+    /*border-radius: 50%;*/
+    font-family: Shrikhand, sans-serif;
 }
 
-.burger_icon_beef, .beef_text {
-    color: rgb(250, 150, 0);
-    border-color: rgb(250, 150, 0);
+.beef_text, .chicken_text, .veggie_text {
+    align-self: center;
+    text-align: center;
+    width: 250px;
+    border: solid 2px;
+    margin-top: 10px;
 }
 
-.burger_icon_chicken, .chicken_text {
-    color: rgb(250, 230, 50);
-    border-color: rgb(250, 230, 50);
+.burger_icon_beef, .beef_text, .drp_beef_links a:link, .drp_beef_links a:visited {
+    color: rgb(250, 50, 50);
+    border-color: rgb(250, 50, 50);
 }
 
-.burger_icon_veggie, .veggie_text {
+.burger_icon_chicken, .chicken_text, .drp_chicken_links a:link, .drp_chicken_links a:visited {
+    color: rgb(250, 250, 250);
+    border-color: rgb(250, 250, 250);
+}
+
+.burger_icon_veggie, .veggie_text, .drp_veggie_links a:link, .drp_veggie_links a:visited {
     color: rgb(100, 250, 0);
     border-color: rgb(100, 250, 0);
 }
 
-.beef_dropdown, .chicken_dropdown, .veggie_dropdown {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    /* Display is set to "none" so that by default .beef_dropdown is hidden and unseen. It becomes visible the moment you hover over .beef, .chicken, and .veggie respectively*/
+.drp_beef_links a:hover, .drp_chicken_links a:hover, .drp_veggie_links a:hover {
+    color:rgb(250, 230, 50);
 }
 
 .drp_beef_links, .drp_chicken_links, .drp_veggie_links {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
+    justify-content: space-around;*/
+    /*width: 400px;
+    height: 400px;*/
     margin: auto;
-    align-items: center;
-    width: 270px;
-    height: 270px;
-    backdrop-filter: blur(10px);
-    justify-content: space-around;
-    gap: 10px;
+    /*border-radius: 50%;*/
     overflow-wrap: anywhere; /*This is in case the link names get too long*/
-}
-
-.beef:hover .beef_dropdown, .chicken:hover .chicken_dropdown, .veggie:hover .veggie_dropdown {
-    display: flex;
-    /* Hover attribute has to be applied to .beef and .beef_drowpdown so that both can be seen whenever you hover over .beef.*/
+    /*backdrop-filter: blur(3px);*/
+    line-height: 50px;
+    /*padding: 10px 0 0 0;*/
 }
 
 
 /*********** FOOTER ******************************************************/
 footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 30px;
-    backdrop-filter: blur(4px);
+    padding: 30px 0;
+    border: ridge 10px rgb(250, 150, 0);
+}
+
+.footer_text {
+    border: ridge 5px rgb(250, 150, 0);
+    background-color: rgb(250, 230, 50);
+    width: 1000px;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
 }
 
 
