@@ -1,9 +1,8 @@
-/*********** UNIVERSAL RULES ******************************************************/
+/*********** GLOBAL RULES ******************************************************/
 body {
-    width: 1366px;
-    margin: auto;
-    padding: 20px;
-    background: black;
+    /*width: 1400px;*/
+    /*margin: 50px auto;*/
+    background-color: rgb(90, 0, 0);
     font-family: Lato, sans-serif;
 }
 
@@ -14,46 +13,100 @@ a:link, a:visited {
 
 a:hover {
     color: rgb(250, 230, 50);
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    text-shadow: 0 0 20px rgb(250, 150, 0);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+header, main {
+    margin: auto;
 }
 
 
 /*********** HEADER ******************************************************/
 header {
-    border: ridge 10px rgb(250, 150, 0);
-    background: url(images/flame_header_background.jpg) bottom repeat-x;
-    /* "repeat-x" is to repeat image horizontally*/
-    background-size: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1400px;
+    align-content: space-between;
 }
 
-.logo {
-    margin: 20px 20px 5px;
-    font: 65px "Uncial Antiqua", sans-serif;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-align: center;
+#web_title {
+    margin: 20px auto;
+    text-align: right;
+}
+
+h1 {
+    margin: 0 auto;
+    font: 80px "Uncial Antiqua", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 95%;
 }
 
 span {
-    font: 55px Shrikhand, sans-serif;
-    font-weight: 700;
+    margin: 0 5px;
+    font: 60px Shrikhand, sans-serif;
+    line-height: 80%;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 20px 65px;
-    font: 40px Shrikhand, sans-serif;
+#logo {
+    /*You must specify "margin: auto;" so that the logo image nested inside can be moved to the center.
+
+    You must THEN specify the width and height so as to shrink down the size of the container and in turn, shrink down the size of the logo-link. Otherwise, the logo-link will span the entire length of the header and not just the size of the image itself. What you will thus end up with is "empty" sides on both sides of the logo image that are also clickable because the link (NOT the image) is expanded and taking up the entire header row even though you only see the image taking up space in the center.*/
+    margin: auto;
+    width: 15%;
+    height: 15%;
+}
+
+#logo img {
+    /*You MUST specify "width: 100%;" so that the image can take up the entire size of the LOGO_CONTAINER it is nested in. Otherwise, if you do not specify the width the actual size of the image will be used...image's actual size is half the monitor screen!!!*/
+    width: 80%;
+    border: solid 5px rgb(250, 150, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#logo img:hover {
+    border: solid 5px rgb(250, 230, 50);
+    transition: 0.2s;
+    cursor: pointer;
+
+    /* offset-x | offset-y | blur-radius | color */
+    filter: drop-shadow(0 0 20px rgb(250, 150, 0));
+}
+
+li {
+    margin: 20px auto 55px auto;
+    font: 35px Shrikhand, sans-serif;
+    list-style-type: none;
+    line-height: 95%;
+    letter-spacing: 2px;
 }
 
 
 /*********** MAIN ******************************************************/
+#banner_welcome {
+    text-align: center;
+    padding: 10px 0;
+    border-top: solid 2px rgb(130, 0, 0);
+    font: 20px "Uncial Antiqua", sans-serif;
+    color: rgb(240, 240, 240);
+}
+
+
+
 
 /*********** Welcome Section ***********/
-.welcome {
+#main_content {
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
     border: ridge 10px rgb(250, 150, 0);
+    background-color: rgb(240, 240, 240);
 }
 
 .welcome_text, .welcome_video {
