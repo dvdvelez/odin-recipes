@@ -1,9 +1,9 @@
 /*********** GLOBAL RULES ******************************************************/
 body {
-    /*width: 1400px;*/
-    /*margin: 50px auto;*/
-    background-color: rgb(90, 0, 0);
+    /*width: 1500px;*/
+    margin: 50px auto 10px auto;
     font-family: Lato, sans-serif;
+    background-color: rgb(90, 0, 0);
 }
 
 a:link, a:visited {
@@ -20,26 +20,12 @@ a:hover {
     cursor: pointer;
 }
 
-header, main {
+header, main, footer {
     margin: auto;
 }
 
-
-/*********** HEADER ******************************************************/
-header {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1400px;
-    align-content: space-between;
-}
-
-#web_title {
-    margin: 20px auto;
-    text-align: right;
-}
-
 h1 {
-    margin: 0 auto;
+    margin: 0;
     font: 80px "Uncial Antiqua", sans-serif;
     font-weight: 900;
     text-transform: uppercase;
@@ -47,8 +33,47 @@ h1 {
     line-height: 95%;
 }
 
+h2 {
+    font: 40px Shrikhand, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+h3 {
+    position: relative;
+    justify-self: center;
+    font: 25px Shrikhand, sans-serif;
+    background-color: rgb(90, 0, 0);
+    border: solid 5px rgb(250, 150, 0);
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+h3:hover {
+    background-color: rgb(130, 0, 0);
+    border: solid 5px rgb(250, 230, 50);
+    transition: 0.2s;
+}
+
+
+/*********** HEADER ******************************************************/
+header {
+    display: flex;
+    width: 1500px;
+    align-content: space-around;
+    background-color: rgb(90, 0, 0);
+}
+
+#web_title {
+    margin: 0 auto;
+    text-align: right;
+}
+
 span {
-    margin: 0 5px;
     font: 60px Shrikhand, sans-serif;
     line-height: 80%;
 }
@@ -63,7 +88,7 @@ span {
 }
 
 #logo img {
-    /*You MUST specify "width: 100%;" so that the image can take up the entire size of the LOGO_CONTAINER it is nested in. Otherwise, if you do not specify the width the actual size of the image will be used...image's actual size is half the monitor screen!!!*/
+    /*You MUST specify "width" so that the image can take up x% of the entire size of the LOGO_CONTAINER it is nested in. Otherwise, if you do not specify the width the actual size of the image will be used...image's actual size is half the monitor screen!!!*/
     width: 80%;
     border: solid 5px rgb(250, 150, 0);
     border-radius: 50%;
@@ -80,7 +105,7 @@ span {
 }
 
 li {
-    margin: 20px auto 55px auto;
+    margin: 0 auto 50px auto;
     font: 35px Shrikhand, sans-serif;
     list-style-type: none;
     line-height: 95%;
@@ -89,126 +114,66 @@ li {
 
 
 /*********** MAIN ******************************************************/
+main {
+    width: 2000px;
+    border-top: solid 2px rgb(70, 0, 0);
+}
+
+#beef_title, #veggie_title {
+    background-color: antiquewhite;
+    border-bottom: solid 2px rgb(220, 205, 185);
+}
+
+#chicken_title {
+    background-color: rgb(240, 240, 250);
+    border-bottom: solid 2px rgb(210, 210, 220)
+}
+
 #banner_welcome {
+    background-color: rgb(90, 0, 0);
     text-align: center;
-    padding: 10px 0;
-    border-top: solid 2px rgb(130, 0, 0);
-    font: 20px "Uncial Antiqua", sans-serif;
+    padding: 20px 0;
+    font: 35px "Uncial Antiqua", sans-serif;
     color: rgb(240, 240, 240);
 }
 
-
-
-
-/*********** Welcome Section ***********/
-#main_content {
+.beef_burgers, .chicken_burgers, .veggie_burgers {
     display: flex;
-    justify-content: space-evenly;
-    padding: 50px;
-    border: ridge 10px rgb(250, 150, 0);
-    background-color: rgb(240, 240, 240);
-}
-
-.welcome_text, .welcome_video {
-    font-size: 30px;
-    width: 500px;
-    height: 250px;
-    padding: 30px;
-    border: ridge 5px rgb(250, 150, 0);
-    background-color: rgb(250, 230, 50);
-}
-
-iframe {
-    width: 500px;
-    height: 250px;
-    /*iframe is used to set the actual size of the embedded video.
-    Note--the dimensions of .welcome_video class above specify the dimensions of the CONTAINER itself and NOT of the actual embedded video.*/
-}
-
-/*********** Burger Links Section ***********/
-.burgers {
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    padding: 30px;
-    border: ridge 10px rgb(250, 150, 0);
-    font-size: 25px;
+    padding: 30px 60px;
+}
+
+.beef_burgers, .veggie_burgers {
+    background-color: antiquewhite;
+}
+
+.chicken_burgers {
+    background-color: rgb(240, 240, 250);
 }
 
 .beef, .chicken, .veggie {
     display: flex;
     flex-direction: column;
-    border-radius: 50%;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 350px;
 }
 
-.burger_icon_beef, .burger_icon_chicken, .burger_icon_veggie {
-    display: flex;
-    justify-content: center; /*This is to center the links container within the icon itself*/
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    font-weight: 900;
-    /*border: solid 2px;*/
-    background: url(images/beef_icon.jpg) no-repeat;
-    background-size: cover;
-    /*border-radius: 50%;*/
-    font-family: Shrikhand, sans-serif;
-}
-
-.beef_text, .chicken_text, .veggie_text {
-    align-self: center;
-    text-align: center;
-    width: 250px;
-    border: solid 2px;
-    margin-top: 10px;
-}
-
-.burger_icon_beef, .beef_text, .drp_beef_links a:link, .drp_beef_links a:visited {
-    color: rgb(250, 50, 50);
-    border-color: rgb(250, 50, 50);
-}
-
-.burger_icon_chicken, .chicken_text, .drp_chicken_links a:link, .drp_chicken_links a:visited {
-    color: rgb(250, 250, 250);
-    border-color: rgb(250, 250, 250);
-}
-
-.burger_icon_veggie, .veggie_text, .drp_veggie_links a:link, .drp_veggie_links a:visited {
-    color: rgb(100, 250, 0);
-    border-color: rgb(100, 250, 0);
-}
-
-.drp_beef_links a:hover, .drp_chicken_links a:hover, .drp_veggie_links a:hover {
-    color:rgb(250, 230, 50);
-}
-
-.drp_beef_links, .drp_chicken_links, .drp_veggie_links {
-    /*display: flex;
-    flex-direction: column;
-    justify-content: space-around;*/
-    /*width: 400px;
-    height: 400px;*/
-    margin: auto;
-    /*border-radius: 50%;*/
-    overflow-wrap: anywhere; /*This is in case the link names get too long*/
-    /*backdrop-filter: blur(3px);*/
-    line-height: 50px;
-    /*padding: 10px 0 0 0;*/
+.beef img, .chicken img, .veggie img {
+    position: relative;
+    top: 20px;
+    width: 90%;
 }
 
 
 /*********** FOOTER ******************************************************/
 footer {
-    padding: 30px 0;
-    border: ridge 10px rgb(250, 150, 0);
-}
-
-.footer_text {
-    border: ridge 5px rgb(250, 150, 0);
-    background-color: rgb(250, 230, 50);
-    width: 1000px;
-    margin: auto;
+    width: 2000px;
+    padding: 20px 0;
     font-size: 20px;
     text-align: center;
+    color: rgb(240, 240, 240);
 }
 
 

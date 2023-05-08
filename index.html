@@ -31,64 +31,73 @@
         </nav>
         
     </header>
-
     <!--The MAIN element usually contains the main content of a webpage.-->
     <main>
-        <div id="banner_welcome"><h2>Odin commands you to try his burgers...or lose an eye!!!</h2></div>
-        <div id="main_content">
-            <div class="welcome_text">
-                Welcome to my first webpage! Click on the links below for my favorite burger recipes. I hope you enjoy them as much as I do! Also, click on the video for great burger tips from Master Chef Gordon Ramsey!!!
+        <div id="banner_welcome">Odin commands you to try his burgers...or lose an eye!!!</div>
+        <h2 id="beef_title">Beef Recipes</h2>
+        <div class="beef_burgers">
+            <div class="beef">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/cheeseburger.html"><h3>Cheeseburger</h3></a>
             </div>
-            <div class="welcome_video">
-                <iframe control="1" src="https://www.youtube.com/embed/iM_KMYulI_s"></iframe>
-                <!--To embed a video into your webpage you must change "watch" to "embed" as above, otherwise if you just copy the URL and do not change watch to embed you will get an error message in your webpage. Also, you have to REMOVE "?v=" after embed and add "/".-->
+            <div class="beef">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/all_amer_burger.html"><h3>All-American Burger</h3></a>
+            </div>
+            <div class="beef">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/texmex_burger.html"><h3>Texmex Burger</h3></a>
+            </div>
+            <div class="beef">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/italian_burger.html"><h3>Italian Burger</h3></a>
             </div>
         </div>
-        <div class="burgers">
-            <div class="beef">
-                <div class="burger_icon_beef">
-                    <div class="drp_beef_links">
-                        <a href="recipes/cheeseburger.html">- Classic Cheeseburger</a><br>
-                        <a href="recipes/all_amer_burger.html">- All-American Burger</a><br>
-                        <a href="recipes/texmex_burger.html">- Tex-Mex Burger</a><br>
-                        <a href="recipes/italian_burger.html">- Italian Burger</a><br>
-                    </div>
-                </div>
-                <div class="beef_text">Beef Recipes</div>
+        <h2 id="chicken_title">Chicken Recipes</h2>
+        <div class="chicken_burgers">
+            <div class="chicken">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/classic_chicken.html"><h3>Classic Chicken Burger</h3></a>
             </div>
-            <div class="chicken">    
-                <div class="burger_icon_chicken">
-                    <div class="drp_chicken_links">
-                        <a href="recipes/classic_chicken.html">- Classic Chicken Burger</a><br>
-                        <a href="recipes/chicken_melt.html">- Chicken Patty Melt</a><br>
-                        <a href="recipes/chicken_from_hell.html">- Spicy Chicken Burger from Hell</a><br>
-                        <a href="recipes/blue_burger.html">- Bacon n Blue Cheese Burger</a><br>
-                    </div>
-                </div>
-                <div class="chicken_text">Chicken Recipes</div>
+            <div class="chicken">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/chicken_melt.html"><h3>Chicken Patty Melt</h3></a>
+            </div>
+            <div class="chicken">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/chicken_from_hell.html"><h3>Devil's Chicken Burger</h3></a>
+            </div>
+            <div class="chicken">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/blue_burger.html"><h3>Bacon n Blue Cheeseburger</h3></a>
+            </div>
+        </div>
+        <h2 id="veggie_title">Veggie Recipes</h2>
+        <div class="veggie_burgers">
+            <div class="veggie">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/red_burger.html"><h3>Red Bean n Mushroom Burger</h3></a>
             </div>
             <div class="veggie">
-                <div class="burger_icon_veggie">
-                    <div class="drp_veggie_links">
-                        <a href="recipes/red_burger.html">- Red Bean n Mushroom Burger</a><br>
-                        <a href="recipes/black_burger.html">- Black Bean Cheeseburger</a><br>
-                        <a href="recipes/chickpea_burger.html">- Chickpea Burger</a><br>
-                        <a href="recipes/quinoa_burger.html">- Quinoa n Pinto Bean Burger</a><br>
-                    </div>
-                </div>
-                <div class="veggie_text">Veggie Recipes</div>
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/black_burger.html"><h3>Black Bean Burger</h3></a>
+            </div>
+            <div class="veggie">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/chickpea_burger.html"><h3>Chickpea Burger</h3></a>
+            </div>
+            <div class="veggie">
+                <img src="images/hamburger.png" alt="picture of hamburger">
+                <a href="recipes/quinoa_burger.html"><h3>Quinoa n Pinto Bean Burger</h3></a>
             </div>
         </div>
     </main>
-    
     <!--FOOTER element usually contains copyright info, contact info, additional page links, etc.-->
     <footer>
-        <div class="footer_text">
-            <p>Special <a href="credits.html">credit</a> and thanks to the artists, content creators, and recipe authors can be found <a href="credits.html">here.</a></p>
-
-            <p>Questions or comments? Contact us by phone at <a href="tel:123-456-7891">(123) 456-7891</a> or by e-mail at <a href="mailto:davids.customerservice@foodmail.com">davids.customerservice@foodmail.com</a></p>
-        </div>
+        <p>Questions or comments? Contact us by phone at 
+            <a href="tel:123-456-7891">(123) 456-7891</a> or by e-mail at 
+            <a href="mailto:davids.customerservice@foodmail.com">davids.customerservice@foodmail.com</a>
+        </p>
     </footer>
-</body>
-
+</bod>
 </html>
