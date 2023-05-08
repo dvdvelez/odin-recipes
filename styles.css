@@ -9,13 +9,14 @@ body {
 a:link, a:visited {
     text-decoration: none;
     color: rgb(250, 150, 0);
+    cursor: pointer;
 }
 
 a:hover {
     color: rgb(250, 230, 50);
 
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    text-shadow: 0 0 20px rgb(250, 150, 0);
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 0 0 30px rgb(250, 150, 0);
     transition: 0.2s;
     cursor: pointer;
 }
@@ -41,20 +42,17 @@ h2 {
 }
 
 h3 {
-    position: relative;
-    justify-self: center;
-    font: 25px Shrikhand, sans-serif;
+    font: 20px Shrikhand, sans-serif;
     background-color: rgb(90, 0, 0);
     border: solid 5px rgb(250, 150, 0);
     border-radius: 20px;
     text-align: center;
-    width: 250px;
-    padding: 10px 5px;
-    cursor: pointer;
+    width: 350px;
+    padding: 10px 0;
 }
 
 h3:hover {
-    background-color: rgb(130, 0, 0);
+    background-color: rgb(150, 0, 0);
     border: solid 5px rgb(250, 230, 50);
     transition: 0.2s;
 }
@@ -63,14 +61,14 @@ h3:hover {
 /*********** HEADER ******************************************************/
 header {
     display: flex;
-    width: 1500px;
-    align-content: space-around;
+    width: 2000px;
+    justify-content: space-around;
     background-color: rgb(90, 0, 0);
 }
 
 #web_title {
-    margin: 0 auto;
     text-align: right;
+    margin-left: 250px;
 }
 
 span {
@@ -79,17 +77,16 @@ span {
 }
 
 #logo {
-    /*You must specify "margin: auto;" so that the logo image nested inside can be moved to the center.
-
-    You must THEN specify the width and height so as to shrink down the size of the container and in turn, shrink down the size of the logo-link. Otherwise, the logo-link will span the entire length of the header and not just the size of the image itself. What you will thus end up with is "empty" sides on both sides of the logo image that are also clickable because the link (NOT the image) is expanded and taking up the entire header row even though you only see the image taking up space in the center.*/
-    margin: auto;
+    /*You must specify the width and height so as to shrink down the size of the container and in turn, shrink down the size of the logo-link. Otherwise, the logo-link will span the entire length of the header and not just the size of the image itself. What you will thus end up with is "empty" sides on both sides of the logo image that are also clickable because the link (NOT the image) is expanded and taking up the entire header row even though you only see the image taking up space in the center.*/
     width: 15%;
     height: 15%;
 }
 
 #logo img {
     /*You MUST specify "width" so that the image can take up x% of the entire size of the LOGO_CONTAINER it is nested in. Otherwise, if you do not specify the width the actual size of the image will be used...image's actual size is half the monitor screen!!!*/
-    width: 80%;
+    display: flex;
+    margin: auto;
+    width: 60%;
     border: solid 5px rgb(250, 150, 0);
     border-radius: 50%;
     cursor: pointer;
@@ -98,14 +95,21 @@ span {
 #logo img:hover {
     border: solid 5px rgb(250, 230, 50);
     transition: 0.2s;
-    cursor: pointer;
 
     /* offset-x | offset-y | blur-radius | color */
-    filter: drop-shadow(0 0 20px rgb(250, 150, 0));
+    filter: drop-shadow(0 0 30px rgb(250, 150, 0));
+}
+
+nav {
+    margin-right: 250px;
+}
+
+ul {
+    padding: 0;
 }
 
 li {
-    margin: 0 auto 50px auto;
+    margin-bottom: 50px;
     font: 35px Shrikhand, sans-serif;
     list-style-type: none;
     line-height: 95%;
@@ -157,13 +161,20 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
-    width: 350px;
+    width: 360px;
 }
 
 .beef img, .chicken img, .veggie img {
-    position: relative;
-    top: 20px;
-    width: 90%;
+    align-self: center;
+    width: 99%;
+    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.beef a, .chicken a, .veggie a {
+    align-self: center;
+    margin-top: -70px;
 }
 
 
