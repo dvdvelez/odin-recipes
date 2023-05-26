@@ -10,6 +10,7 @@ a:link, a:visited {
     text-decoration: none;
     color: rgb(250, 150, 0);
     cursor: pointer;
+    transition: ease-out 0.4s;
 }
 
 a:hover {
@@ -17,6 +18,7 @@ a:hover {
 
     /* offset-x | offset-y | blur-radius | color */
     text-shadow: 0 0 30px rgb(250, 150, 0);
+    font-size: 110%;
     transition: 0.2s;
     cursor: pointer;
 }
@@ -43,20 +45,25 @@ h2 {
 
 h3 {
     font: 20px Shrikhand, sans-serif;
-    background-color: rgb(90, 0, 0);
-    border: solid 5px rgb(250, 150, 0);
-    border-radius: 20px;
     text-align: center;
-    width: 350px;
-    padding: 10px 0;
+    margin: auto 0;
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    /*padding: 10px 0;*/
 }
 
-h3:hover {
-    background-color: rgb(150, 0, 0);
-    border: solid 5px rgb(250, 230, 50);
-    transition: 0.2s;
+h4 {
+    font: 16px sans-serif;
+    background-color: antiquewhite;
+    font-weight: 700;
+    margin: auto 0;
+    text-align: center;
+    /*vertical-align: middle;*/
+    height: 60px;
+    /*line-height: 16px;*/
+    padding: 20px;
 }
-
 
 /*********** HEADER ******************************************************/
 header {
@@ -120,7 +127,7 @@ li {
 /*********** MAIN ******************************************************/
 main {
     width: 2000px;
-    border-top: solid 2px rgb(70, 0, 0);
+    border-top: solid 2px rgb(60, 0, 0);
 }
 
 #banner_welcome {
@@ -162,20 +169,25 @@ main {
     flex-wrap: wrap;
     align-content: space-around;
     width: 360px;
+    border: solid rgb(250, 150, 0) 2px;
+    background-color: rgb(120, 0, 0);
+
+    /* 0 shadow top | 4px shadow right | 8px shadow bottom | 0px left | rgba color |
+       Second set is to add another shadow layer. First shadow set will be thinner and closer to the container edges.
+       Second shadow set will be thicker than the first set and will spread out more.
+       Using two shadow sets gives the shadow a fade-out effect, like when you go for a haircut. */
+    box-shadow: 0 4px 8px 0 rgba(120, 0, 0, 0.5), 0 12px 24px 0 rgba(120, 0, 0, 0.3);
 }
 
 .beef img, .chicken img, .veggie img {
     align-self: center;
-    width: 99%;
-    border-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    width: 80%;
 }
 
-.beef a, .chicken a, .veggie a {
+/*.beef h3, .chicken a, .veggie a {
     align-self: center;
-    margin-top: -70px;
-}
+    margin-top: 5px;
+}*/
 
 
 /*********** FOOTER ******************************************************/
