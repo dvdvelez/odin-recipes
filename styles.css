@@ -9,7 +9,6 @@ body {
 a:link, a:visited {
     text-decoration: none;
     color: rgb(250, 150, 0);
-    cursor: pointer;
     transition: ease-out 0.4s;
 }
 
@@ -18,9 +17,13 @@ a:hover {
 
     /* offset-x | offset-y | blur-radius | color */
     text-shadow: 0 0 30px rgb(250, 150, 0);
-    font-size: 110%;
     transition: 0.2s;
     cursor: pointer;
+}
+
+h2 a:hover, h3 a:hover, h4 a:hover {
+    font-size: 110%;
+    /* Had to specify and place these selectors separately from the universal a:hover ruleset above since it was making the text in the header links also increase in size whenever hovering. It was causing displacement of other header items. */
 }
 
 header, main, footer {
@@ -50,7 +53,6 @@ h3 {
     width: 100%;
     line-height: 60px;
     height: 60px;
-    /*padding: 10px 0;*/
 }
 
 h4 {
@@ -59,10 +61,8 @@ h4 {
     font-weight: 700;
     margin: auto 0;
     text-align: center;
-    /*vertical-align: middle;*/
     height: 60px;
-    /*line-height: 16px;*/
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 /*********** HEADER ******************************************************/
@@ -96,7 +96,7 @@ span {
     width: 60%;
     border: solid 5px rgb(250, 150, 0);
     border-radius: 50%;
-    cursor: pointer;
+    transition: ease-out 0.4s;
 }
 
 #logo img:hover {
@@ -105,6 +105,7 @@ span {
 
     /* offset-x | offset-y | blur-radius | color */
     filter: drop-shadow(0 0 30px rgb(250, 150, 0));
+    cursor: pointer;
 }
 
 nav {
