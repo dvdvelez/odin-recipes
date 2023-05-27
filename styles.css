@@ -153,7 +153,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 30px 60px;
+    padding: 30px 60px 100px 60px;
 }
 
 .beef_burgers, .veggie_burgers {
@@ -184,11 +184,6 @@ main {
     align-self: center;
     width: 80%;
 }
-
-/*.beef h3, .chicken a, .veggie a {
-    align-self: center;
-    margin-top: 5px;
-}*/
 
 
 /*********** FOOTER ******************************************************/
