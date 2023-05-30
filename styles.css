@@ -1,6 +1,6 @@
 /*********** GLOBAL RULES ******************************************************/
 body {
-    /*width: 1500px;*/
+    min-width: 500px;
     margin: 50px auto 10px auto;
     font-family: Lato, sans-serif;
     background-color: rgb(90, 0, 0);
@@ -174,7 +174,8 @@ main {
 .beef, .chicken, .veggie {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
+    /*overflow: hidden;*/
     align-content: space-around;
     width: 360px;
     border: solid rgb(250, 150, 0) 2px;
@@ -190,6 +191,7 @@ main {
 .beef img, .chicken img, .veggie img {
     align-self: center;
     width: 80%;
+    height: auto;
 }
 
 
