@@ -4,13 +4,16 @@ html {
     /*min-width: 150px;*/
     height: auto;
     margin: auto;
+    padding: 50px;
+    font-size: 20px;
 }
 
 body {
     /*min-width: 500px;*/
     width: 99%;
     height: auto;
-    margin: 50px auto 10px auto;
+    /*margin: 50px auto 10px auto;*/
+    margin: 0 auto;
     font-family: Lato, sans-serif;
     background-color: rgb(90, 0, 0);
 }
@@ -41,7 +44,8 @@ header, main, footer {
 
 h1 {
     margin: 0;
-    font: 80px "Uncial Antiqua", sans-serif;
+    font: 4rem "Uncial Antiqua", sans-serif;
+    /*font: 80px "Uncial Antiqua", sans-serif;*/
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -49,14 +53,16 @@ h1 {
 }
 
 h2 {
-    font: 40px Shrikhand, sans-serif;
+    font: 2rem Shrikhand, sans-serif;
+    /*font: 40px Shrikhand, sans-serif;*/
     text-align: center;
     padding-top: 50px;
     margin: 0 auto;
 }
 
 h3 {
-    font: 20px Shrikhand, sans-serif;
+    font: 1rem Shrikhand, sans-serif;
+    /*font: 20px Shrikhand, sans-serif;*/
     text-align: center;
     margin: auto 0;
     width: 100%;
@@ -65,7 +71,8 @@ h3 {
 }
 
 h4 {
-    font: 16px sans-serif;
+    font: 0.8rem sans-serif;
+    /*font: 16px sans-serif;*/
     background-color: antiquewhite;
     font-weight: 700;
     margin: auto;
@@ -74,10 +81,25 @@ h4 {
     padding: 30px 20px;
 }
 
+span {
+    font: 3rem Shrikhand, sans-serif;
+    /*font: 60px Shrikhand, sans-serif;*/
+    /*line-height: 80%;*/
+}
+
+li span {
+    /*This is to override the global ruleset above; it is needed to distinguish li span from global span.*/
+    font-size: 2rem;
+    padding: 0;
+}
+
+
 /*********** HEADER ******************************************************/
 header {
     display: flex;
     flex-wrap: wrap;
+    width: auto;
+    height: 300px;
     /*width: 2000px;*/
     /*padding: 0 200px 0 200px;*/
     justify-content: space-around;
@@ -85,17 +107,17 @@ header {
 }
 
 #web_title, #logo_container, nav {
-    margin: 30px 0 60px 0;
+    margin: 10px 0 30px 0;
+}
+
+#web_title, nav {
+    width: auto;
+    height: auto;
 }
 
 #web_title {
     text-align: right;
     /*margin-left: 250px;*/
-}
-
-span {
-    font: 60px Shrikhand, sans-serif;
-    /*line-height: 80%;*/
 }
 
 #logo_container {
@@ -107,6 +129,7 @@ span {
 #logo {
     margin: auto;
     width: 250px;
+    height: auto;
 
 }
 
@@ -143,19 +166,14 @@ ul {
 li {
     /*margin-bottom: 50px;*/
     /*font: 35px Shrikhand, sans-serif;*/
-    margin: 0 auto 20px auto;
+    margin: 0 auto 30px auto;
     list-style-type: none;
     line-height: 95%;
     letter-spacing: 2px;
 }
 
-li span {
-    font-size: 40px;
-    padding: 0;
-}
-
-@media only screen and (min-width: 630px) and (max-width: 1320px) and (orientation: landscape), (orientation: portrait) {
-    header {
+@media only screen and (min-width: 1201px) and (max-width: 1440px) and (orientation: landscape), (orientation: portrait) {
+    /*header {
         display: block;
     }
 
@@ -165,20 +183,153 @@ li span {
 
     nav {
         text-align: center;
+    }*/
+
+    html {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    span {
+        font-size: 2.5rem; 
+    }
+    
+    li span {
+        font-size: 1.5rem;
+    }
+
+    header {
+        height: 250px;
+    }
+
+    #logo {
+        margin: auto;
+        width: 200px;
+        height: auto;
+    }
+
+    li {
+        margin: 0 auto 25px auto;
     }
 }
 
-@media only screen and (max-width: 629px) and (orientation: landscape), (orientation: portrait) {
+@media only screen and (min-width: 950px) and (max-width: 1201px) and (orientation: landscape), (orientation: portrait) {
+    html {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    span {
+        font-size: 2rem; 
+    }
+    
+    li span {
+        font-size: 1rem;
+    }
+
+    header {
+        height: 200px;
+    }
+
+    #logo {
+        margin: auto;
+        width: 150px;
+        /*height: auto;*/
+    }
+
+    li {
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 950px) and (orientation: landscape), (orientation: portrait) {
+    html {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+    
+    span {
+        font-size: 1.25rem; 
+    }
+    
+    li span {
+        font-size: 1rem;
+    }
+
     header {
         display: block;
+        height: auto;
     }
 
     #web_title {
         text-align: center;
     }
 
+    #logo {
+        margin: auto;
+        width: 100px;
+        height: auto;
+    }
+
     nav {
         text-align: center;
+    }
+
+    li {
+        margin: 0 auto 15px auto;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape), (orientation: portrait) {
+    html {
+        /*min-width: 325px;
+        height: auto;
+        margin: auto;*/
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    span {
+        font-size: 1rem; 
+    }
+    
+    li span {
+        font-size: 0.75rem;
+    }
+
+    header {
+        display: block;
+        height: auto;
+    }
+
+    #web_title {
+        text-align: center;
+    }
+
+    #logo {
+        margin: auto;
+        width: 50px;
+        height: auto;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    li {
+        margin: 0 auto 10px auto;
     }
 }
 
