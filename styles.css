@@ -65,7 +65,7 @@ h3 {
     /*font: 20px Shrikhand, sans-serif;*/
     text-align: center;
     margin: auto 0;
-    width: 100%;
+    /*width: 100%;*/
     line-height: 60px;
     height: 60px;
 }
@@ -106,7 +106,7 @@ header {
     background-color: rgb(90, 0, 0);
 }
 
-#web_title, #logo_container, nav {
+#web_title, #logo, nav {
     margin: 10px 0 30px 0;
 }
 
@@ -127,7 +127,9 @@ header {
 }
 
 #logo {
-    margin: auto;
+    /*display: flex;*/
+
+    /*margin: auto;*/
     width: 250px;
     height: auto;
 
@@ -135,8 +137,8 @@ header {
 
 #logo img {
     /*You MUST specify "width" so that the image can take up x% of the entire size of the SUB_LOGO container it is nested in. Otherwise, if you do not specify the width the actual size of the image will be used...image's actual size is half the monitor screen!!!*/
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;
+    flex-wrap: wrap;*/
     margin: auto;
     width: 95%;
     border: solid 5px rgb(250, 150, 0);
@@ -172,53 +174,9 @@ li {
     letter-spacing: 2px;
 }
 
-@media only screen and (min-width: 1201px) and (max-width: 1440px) and (orientation: landscape), (orientation: portrait) {
-    /*header {
-        display: block;
-    }
-
-    #web_title {
-        text-align: center;
-    }
-
-    nav {
-        text-align: center;
-    }*/
-
+@media only screen and (min-width: 1025px) and (max-width: 1440px) and (orientation: landscape), (orientation: portrait) {
     html {
         padding: 40px;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-    
-    span {
-        font-size: 2.5rem; 
-    }
-    
-    li span {
-        font-size: 1.5rem;
-    }
-
-    header {
-        height: 250px;
-    }
-
-    #logo {
-        margin: auto;
-        width: 200px;
-        height: auto;
-    }
-
-    li {
-        margin: 0 auto 25px auto;
-    }
-}
-
-@media only screen and (min-width: 950px) and (max-width: 1201px) and (orientation: landscape), (orientation: portrait) {
-    html {
-        padding: 30px;
     }
 
     h1 {
@@ -234,67 +192,27 @@ li {
     }
 
     header {
-        height: 200px;
+        height: 220px;
+    }
+
+    #web_title, #logo, nav {
+        margin: 10px 0 20px 0;
     }
 
     #logo {
-        margin: auto;
+        /*margin: auto;*/
         width: 150px;
         /*height: auto;*/
     }
 
     li {
-        margin: 0 auto 20px auto;
+        /*margin: 0 auto 25px auto;*/
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 950px) and (orientation: landscape), (orientation: portrait) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape), (orientation: portrait) {
     html {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2.25rem;
-    }
-    
-    span {
-        font-size: 1.25rem; 
-    }
-    
-    li span {
-        font-size: 1rem;
-    }
-
-    header {
-        display: block;
-        height: auto;
-    }
-
-    #web_title {
-        text-align: center;
-    }
-
-    #logo {
-        margin: auto;
-        width: 100px;
-        height: auto;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    li {
-        margin: 0 auto 15px auto;
-    }
-}
-
-@media only screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape), (orientation: portrait) {
-    html {
-        /*min-width: 325px;
-        height: auto;
-        margin: auto;*/
-        padding: 10px;
+        padding: 30px;
     }
 
     h1 {
@@ -307,6 +225,46 @@ li {
     
     li span {
         font-size: 0.75rem;
+    }
+
+    header {
+        height: 150px;
+        /*Keep header and logo height ratio same*/
+    }
+
+    #web_title, #logo, nav {
+        margin: 5px 0 10px 0;
+    }
+
+    #logo {
+        width: 80px;
+        /*Keep header height and logo width ratio same*/
+    }
+
+    #logo img {
+        border-width: 2px;
+    }
+
+    li {
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 768px) and (orientation: landscape), (orientation: portrait) {
+    html {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+    
+    span {
+        font-size: 1rem; 
+    }
+    
+    li span {
+        font-size:0.75rem;
     }
 
     header {
@@ -329,7 +287,7 @@ li {
     }
 
     li {
-        margin: 0 auto 10px auto;
+        margin: 0 auto 5px auto;
     }
 }
 
