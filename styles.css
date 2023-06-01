@@ -65,7 +65,7 @@ h3 {
     /*font: 20px Shrikhand, sans-serif;*/
     text-align: center;
     margin: auto 0;
-    /*width: 100%;*/
+    width: 100%;
     line-height: 60px;
     height: 60px;
 }
@@ -174,123 +174,6 @@ li {
     letter-spacing: 2px;
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1440px) and (orientation: landscape), (orientation: portrait) {
-    html {
-        padding: 40px;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-    
-    span {
-        font-size: 2rem; 
-    }
-    
-    li span {
-        font-size: 1rem;
-    }
-
-    header {
-        height: 220px;
-    }
-
-    #web_title, #logo, nav {
-        margin: 10px 0 20px 0;
-    }
-
-    #logo {
-        /*margin: auto;*/
-        width: 150px;
-        /*height: auto;*/
-    }
-
-    li {
-        /*margin: 0 auto 25px auto;*/
-    }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape), (orientation: portrait) {
-    html {
-        padding: 30px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-    
-    span {
-        font-size: 1rem; 
-    }
-    
-    li span {
-        font-size: 0.75rem;
-    }
-
-    header {
-        height: 150px;
-        /*Keep header and logo height ratio same*/
-    }
-
-    #web_title, #logo, nav {
-        margin: 5px 0 10px 0;
-    }
-
-    #logo {
-        width: 80px;
-        /*Keep header height and logo width ratio same*/
-    }
-
-    #logo img {
-        border-width: 2px;
-    }
-
-    li {
-        margin: 0 auto 20px auto;
-    }
-}
-
-@media only screen and (min-width: 350px) and (max-width: 768px) and (orientation: landscape), (orientation: portrait) {
-    html {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 1.25rem;
-    }
-    
-    span {
-        font-size: 1rem; 
-    }
-    
-    li span {
-        font-size:0.75rem;
-    }
-
-    header {
-        display: block;
-        height: auto;
-    }
-
-    #web_title {
-        text-align: center;
-    }
-
-    #logo {
-        margin: auto;
-        width: 50px;
-        height: auto;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    li {
-        margin: 0 auto 5px auto;
-    }
-}
-
 
 /*********** MAIN ******************************************************/
 main {
@@ -388,4 +271,129 @@ footer {
 
 .cook_text {
     font-size: 24px;
+}
+
+
+/*********** MEDIA QUERIES ******************************************************/
+@media only screen and (min-width: 1025px) and (max-width: 1440px) and (orientation: landscape), (orientation: portrait) {
+    /*Responsiveness for laptops*/
+
+    html {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    span {
+        font-size: 2rem; 
+    }
+    
+    li span {
+        font-size: 1rem;
+    }
+
+    header {
+        height: 220px;
+    }
+
+    #web_title, #logo, nav {
+        margin: 10px 0 20px 0;
+    }
+
+    #logo {
+        /*margin: auto;*/
+        width: 150px;
+        /*height: auto;*/
+    }
+
+    li {
+        /*margin: 0 auto 25px auto;*/
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape), (orientation: portrait) {
+    /*Responsiveness for tablets*/
+
+    html {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    span {
+        font-size: 1rem; 
+    }
+    
+    li span {
+        font-size: 0.75rem;
+    }
+
+    header {
+        height: 150px;
+        /*Keep header and logo height ratio same*/
+    }
+
+    #web_title, #logo, nav {
+        margin: 5px 0 10px 0;
+    }
+
+    #logo {
+        width: 80px;
+        /*Keep header height and logo width ratio same*/
+    }
+
+    #logo img {
+        border-width: 2px;
+    }
+
+    #logo img:hover {
+        border-width: 2px;
+    }
+
+    li {
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+    /*Responsiveness for smartphones*/
+
+    html {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+    
+    span {
+        font-size: 1rem; 
+    }
+    
+    li span {
+        font-size:0.75rem;
+    }
+
+    header {
+        display: block;
+        height: auto;
+    }
+
+    #web_title, nav {
+        text-align: center;
+    }
+
+    #logo {
+        margin: auto;
+        width: 50px;
+        height: auto;
+    }
+
+    li {
+        margin: 0 auto 5px auto;
+    }
 }
