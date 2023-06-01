@@ -1,7 +1,6 @@
 /*********** GLOBAL RULES ******************************************************/
 html {
     max-width: 2000px;
-    /*min-width: 150px;*/
     height: auto;
     margin: auto;
     padding: 50px;
@@ -9,10 +8,8 @@ html {
 }
 
 body {
-    /*min-width: 500px;*/
     width: 99%;
     height: auto;
-    /*margin: 50px auto 10px auto;*/
     margin: 0 auto;
     font-family: Lato, sans-serif;
     background-color: rgb(90, 0, 0);
@@ -45,7 +42,6 @@ header, main, footer {
 h1 {
     margin: 0;
     font: 4rem "Uncial Antiqua", sans-serif;
-    /*font: 80px "Uncial Antiqua", sans-serif;*/
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -54,7 +50,6 @@ h1 {
 
 h2 {
     font: 2rem Shrikhand, sans-serif;
-    /*font: 40px Shrikhand, sans-serif;*/
     text-align: center;
     padding-top: 50px;
     margin: 0 auto;
@@ -62,7 +57,6 @@ h2 {
 
 h3 {
     font: 1rem Shrikhand, sans-serif;
-    /*font: 20px Shrikhand, sans-serif;*/
     text-align: center;
     margin: auto 0;
     width: 100%;
@@ -72,7 +66,6 @@ h3 {
 
 h4 {
     font: 0.8rem sans-serif;
-    /*font: 16px sans-serif;*/
     background-color: antiquewhite;
     font-weight: 700;
     margin: auto;
@@ -83,8 +76,6 @@ h4 {
 
 span {
     font: 3rem Shrikhand, sans-serif;
-    /*font: 60px Shrikhand, sans-serif;*/
-    /*line-height: 80%;*/
 }
 
 li span {
@@ -100,8 +91,6 @@ header {
     flex-wrap: wrap;
     width: auto;
     height: 300px;
-    /*width: 2000px;*/
-    /*padding: 0 200px 0 200px;*/
     justify-content: space-around;
     background-color: rgb(90, 0, 0);
 }
@@ -117,28 +106,18 @@ header {
 
 #web_title {
     text-align: right;
-    /*margin-left: 250px;*/
-}
-
-#logo_container {
-    /*You must specify the width and height so as to shrink down the size of the container and in turn, shrink down the size of the logo-link. Otherwise, the logo-link will span the entire length of the header and not just the size of the image itself. What you will thus end up with is "empty" sides on both sides of the logo image that are also clickable because the link (NOT the image) is expanded and taking up the entire header row even though you only see the image taking up space in the center.
-    width: 20%;
-    height: 20%;*/
 }
 
 #logo {
-    /*display: flex;*/
-
-    /*margin: auto;*/
+    /*By specifying the width/size of the parent #logo container you can control the length/size of the child logo-link inside it so that it doesn't span the entire row by default. Otherwise, the logo-link will span the entire length of the header and not just the size of the logo image that is inside it. What you will thus end up with is "empty" sides on both sides of the logo image that are also clickable because the link (NOT the image) is expanded and taking up the entire header row even though you only see the image taking up space in the center.*/
+    width: 20%;
+    height: 20%;
     width: 250px;
     height: auto;
-
 }
 
 #logo img {
-    /*You MUST specify "width" so that the image can take up x% of the entire size of the SUB_LOGO container it is nested in. Otherwise, if you do not specify the width the actual size of the image will be used...image's actual size is half the monitor screen!!!*/
-    /*display: flex;
-    flex-wrap: wrap;*/
+    /*You MUST specify "width" so that the image can take up x% of the entire size of the logo-link parent container it is nested in. Otherwise, if you do not specify the width the actual size of the image will be used...image's actual size is half the monitor screen!!!*/
     margin: auto;
     width: 95%;
     border: solid 5px rgb(250, 150, 0);
@@ -155,19 +134,12 @@ header {
     cursor: pointer;
 }
 
-nav {
-    /*margin: 0 0;*/
-    /*margin-right: 250px;*/
-}
-
 ul {
     margin: 0 auto;
     padding: 0;
 }
 
 li {
-    /*margin-bottom: 50px;*/
-    /*font: 35px Shrikhand, sans-serif;*/
     margin: 0 auto 30px auto;
     list-style-type: none;
     line-height: 95%;
@@ -177,8 +149,6 @@ li {
 
 /*********** MAIN ******************************************************/
 main {
-    /*width: 2000px;*/
-    /*width: auto;*/
     border-top: solid 2px rgb(60, 0, 0);
 }
 
@@ -241,7 +211,6 @@ main {
 
 /*********** FOOTER ******************************************************/
 footer {
-    /*width: 2000px;*/
     padding: 20px 0;
     font-size: 20px;
     text-align: center;
@@ -275,8 +244,8 @@ footer {
 
 
 /*********** MEDIA QUERIES ******************************************************/
-@media only screen and (min-width: 1025px) and (max-width: 1440px) and (orientation: landscape), (orientation: portrait) {
-    /*Responsiveness for laptops*/
+@media only screen and (min-width: 1025px) and (max-width: 1550px) and (orientation: landscape), (orientation: portrait) {
+    /*****Responsiveness for laptops*****/
 
     html {
         padding: 40px;
@@ -303,18 +272,12 @@ footer {
     }
 
     #logo {
-        /*margin: auto;*/
         width: 150px;
-        /*height: auto;*/
-    }
-
-    li {
-        /*margin: 0 auto 25px auto;*/
     }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape), (orientation: portrait) {
-    /*Responsiveness for tablets*/
+    /*****Responsiveness for tablets*****/
 
     html {
         padding: 30px;
@@ -334,7 +297,7 @@ footer {
 
     header {
         height: 150px;
-        /*Keep header and logo height ratio same*/
+        /*Keep header height and logo width ratio same*/
     }
 
     #web_title, #logo, nav {
@@ -361,7 +324,7 @@ footer {
 
 @media only screen and (min-width: 350px) and (max-width: 768px) {
     /*Responsiveness for smartphones*/
-
+    /*Removed landscape/portrait attributes since media query was taking effect at max-width greater than 768px*/
     html {
         padding: 20px;
     }
