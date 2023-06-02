@@ -167,14 +167,6 @@ main {
     border-top: solid 2px rgb(60, 0, 0);
 }
 
-#banner_welcome {
-    /*background-color: rgb(90, 0, 0);
-    text-align: center;
-    padding: 20px 0;
-    font: 35px "Uncial Antiqua", sans-serif;
-    color: rgb(240, 240, 240);*/
-}
-
 #beef_title, #veggie_title {
     background-color: antiquewhite;
     border-bottom: solid 2px rgb(220, 205, 185);
@@ -221,15 +213,6 @@ main {
     align-self: center;
     width: 80%;
     height: auto;
-}
-
-
-/*********** FOOTER ******************************************************/
-footer {
-    /*padding: 20px 0;
-    font-size: 20px;
-    text-align: center;
-    color: rgb(240, 240, 240);*/
 }
 
 
