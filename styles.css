@@ -85,7 +85,7 @@ li span {
 }
 
 p {
-    /*background-color: rgb(90, 0, 0);*/
+    /*Have removed #banner_welcome ruleset entirely in favor of global p ruleset for now.*/
     margin: 0 auto;
     padding: 30px 0;
     text-align: center;
