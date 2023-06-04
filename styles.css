@@ -529,7 +529,7 @@ main {
 
     .beef, .chicken, .veggie {
         width: 160px;
-        margin: 5px;
+        margin: 10px;
     }
 }
 
