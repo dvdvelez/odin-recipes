@@ -5,7 +5,7 @@ html {
     margin: auto;
     padding: 50px;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 10px;
 }
 
 body {
@@ -41,7 +41,9 @@ header, main, footer {
 
 h1 {
     margin: 0;
-    font: 4rem "Uncial Antiqua", sans-serif;
+    /*Reduce font-size by 1.2 points per each media query*/
+    font-size: 7.2rem;
+    font-family: "Uncial Antiqua", sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -49,38 +51,53 @@ h1 {
 }
 
 h2 {
-    font: 2rem Shrikhand, sans-serif;
+    /*Reduce font-size by 0.5 points per each media query*/
+    font: 4rem Shrikhand, sans-serif;
     text-align: center;
     padding-top: 50px;
     margin: 0 auto;
 }
 
 h3 {
-    font: 1rem Shrikhand, sans-serif;
-    text-align: center;
-    margin: auto 0;
-    width: 100%;
-    line-height: 60px;
+    /*Reduce font-size by 0.1 points per each media query*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /*To align when text is multiple rows*/
+    align-items: center;  /*To align vertically*/
+    text-align: center;  /*To align sinle-row text*/
+    font: 2rem Shrikhand, sans-serif;
+    /*margin: auto;*/
+    padding: 0 5px;
+    width: auto;
     height: 60px;
 }
 
 h4 {
-    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /*To align when text is multiple rows*/
+    align-items: center;  /*To align vertically*/
+    font-size: 1.6rem;
     background-color: antiquewhite;
     font-weight: 700;
     margin: auto;
+    /*Margin needed to keep h4 container lined to the very bottom and horizontally centered in it's parent container*/
+
     text-align: center;
+    width: auto;
     height: 60px;
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
 
 span {
-    font: 3rem Shrikhand, sans-serif;
+    /*Reduce font-size by 0.5 points per each media query*/
+    font: 4rem Shrikhand, sans-serif;
 }
 
 li span {
     /*This is to override the global ruleset for span; it is needed to distinguish li span from global span.*/
-    font-size: 2rem;
+    /*Reduce font-size by 0.4 points per each media query*/
+    font-size: 3rem;
     padding: 0;
 }
 
@@ -89,14 +106,14 @@ p {
     margin: 0 auto;
     padding: 30px 0;
     text-align: center;
-    font: 1.75rem "Uncial Antiqua", sans-serif;
+    font: 3.5rem "Uncial Antiqua", sans-serif;
     color: rgb(240, 240, 240);
 }
 
 footer p {
     /*This is to override the global ruleset for p; it is needed to distinguish footer p from global p. Have removed footer section entirely for now.*/
     margin: 20px auto 0 auto;
-    font: 1rem sans-serif;
+    font: 1.6rem sans-serif;
 }
 
 
@@ -125,9 +142,7 @@ header {
 
 #logo {
     /*By specifying the width/size of the parent #logo container you can control the length/size of the child logo-link inside it so that it doesn't span the entire row by default. Otherwise, the logo-link will span the entire length of the header and not just the size of the logo image that is inside it. What you will thus end up with is "empty" sides on both sides of the logo image that are also clickable because the link (NOT the image) is expanded and taking up the entire header row even though you only see the image taking up space in the center.*/
-    width: 20%;
-    height: 20%;
-    width: 250px;
+    width: 220px;
     height: auto;
 }
 
@@ -211,7 +226,7 @@ main {
 
 .beef img, .chicken img, .veggie img {
     align-self: center;
-    width: 80%;
+    width: 85%;
     height: auto;
 }
 
@@ -242,114 +257,348 @@ main {
 
 
 /*********** MEDIA QUERIES ******************************************************/
-@media only screen and (min-width: 1025px) and (max-width: 1550px) and (orientation: landscape), (orientation: portrait) {
+@media only screen and (min-width: 1000px) and (max-width: 1400px) and (orientation: landscape), (orientation: portrait) {
     /*****Responsiveness for laptops*****/
 
     html {
-        padding: 40px;
+        padding: 20px;
+        background-color: yellow;
     }
 
     h1 {
-        font-size: 3rem;
+        /*Reduce font-size by 1.2 points per each media query*/
+        font-size: 6rem;
     }
 
     h2 {
-    font: 1.5rem Shrikhand, sans-serif;
+        /*Reduce font-size by 0.5 points per each media query*/
+        /*Reduce padding by 10px for each media query*/
+        font-size: 3.5rem;
+        padding-top: 40px;
     }
 
     h3 {
-    font: 0.8rem Shrikhand, sans-serif;
+        /*Reduce font-size by 0.2 points per each media query*/
+        /*Increase height by 5px per media query*/
+        font-size: 1.8rem;
+        height: 65px;
     }
-    
+
+    h4 {
+        /*Reduce font-size by 0.1 points per each media query*/
+        /*Increase height by 10px for each media query*/
+        font-size: 1.5rem;
+        height: 70px;
+        padding: 25px 15px;
+    }
+
     span {
-        font-size: 2rem; 
+        /*Reduce font-size by 0.5 points per each media query*/
+        font-size: 3.5rem;
     }
-    
+
     li span {
-        font-size: 1rem;
+        /*Reduce font-size by 0.4 points per each media query*/
+        font-size: 2.6rem;
+    }
+
+    p {
+        /*Reduce font-size by 0.5 points per each media query*/
+        padding: 25px 0;
+        font-size: 3rem;
+    }
+
+    footer p {
+        /*Reduce font-size by 0.1 points per each media query*/
+        /*Reduce margin by by 5px for each media query*/
+        margin: 15px auto 0 auto;
+        font-size: 1.5rem;
     }
 
     header {
-        height: 220px;
+        /*Reduce height by 50px per each media query*/
+        height: 250px;
     }
 
     #web_title, #logo, nav {
-        margin: 10px 0 20px 0;
+        margin: 10px 0 30px 0;
     }
 
     #logo {
-        width: 150px;
+        /*Reduce width by 50px per each media query*/
+        width: 170px;
+    }
+
+    li {
+        margin: 0 auto 25px auto;
+    }
+
+    .beef_burgers, .chicken_burgers, .veggie_burgers {
+        padding: 30px 10px 80px 10px;
+    }
+
+    .beef, .chicken, .veggie {
+        width: 280px;
+        margin: 15px;
     }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape), (orientation: portrait) {
-    /*****Responsiveness for tablets*****/
+@media only screen and (min-width: 800px) and (max-width: 1000px) and (orientation: landscape), (orientation: portrait) {
+    /*****Responsiveness for tablets landscape mode*****/
 
     html {
-        padding: 30px;
+        /*Reduce padding by 10px for each media query*/
+        padding: 10px;
+        background-color: red;
     }
 
     h1 {
-        font-size: 2rem;
+        /*Reduce font-size by 1.2 points per each media query*/
+        font-size: 4.8rem;
     }
-    
+
+    h2 {
+        /*Reduce font-size by 0.5 points per each media query*/
+        /*Reduce padding by 10px for each media query*/
+        font-size: 3rem;
+        padding-top: 30px;
+    }
+
+    h3 {
+        /*Reduce font-size by 0.2 points per each media query*/
+        /*Increase height by 5px per media query*/
+        font-size: 1.6rem;
+        height: 70px;
+    }
+
+    h4 {
+        /*Reduce font-size by 0.1 points per each media query*/
+        /*Increase height by 10px for each media query*/
+        font-size: 1.4rem;
+        height: 80px;
+        padding: 30px 5px;
+    }
+
     span {
-        font-size: 1rem; 
+        /*Reduce font-size by 0.5 points per each media query*/
+        font-size: 3rem;
     }
-    
+
     li span {
-        font-size: 0.75rem;
+        /*Reduce font-size by 0.4 points per each media query*/
+        font-size: 2.2rem;
+    }
+
+    p {
+        /*Reduce font-size by 0.5 points per each media query*/
+        /*Reduce padding by 5px per each media query*/
+        padding: 20px 0;
+        font-size: 2.5rem;
+    }
+
+    footer p {
+        /*Reduce font-size by 0.1 points per each media query*/
+        /*Reduce margin by by 5px for each media query*/
+        margin: 10px auto 0 auto;
+        font-size: 1.4rem;
     }
 
     header {
-        height: 150px;
-        /*Keep header height and logo width ratio same*/
+        /*Reduce height by 50px per each media query*/
+        height: 200px;
     }
 
     #web_title, #logo, nav {
-        margin: 5px 0 10px 0;
+        margin: 10px 0 30px 0;
     }
 
     #logo {
-        width: 80px;
-        /*Keep header height and logo width ratio same*/
+        /*Reduce width by 50px per each media query*/
+        width: 120px;
     }
 
-    #logo img {
-        border-width: 2px;
-    }
-
-    #logo img:hover {
+    #logo img, #logo img:hover {
         border-width: 2px;
     }
 
     li {
         margin: 0 auto 20px auto;
     }
+
+    .beef_burgers, .chicken_burgers, .veggie_burgers {
+        padding: 20px 0 60px 0;
+    }
+
+    .beef, .chicken, .veggie {
+        width: 210px;
+        margin: 10px;
+    }
 }
 
-@media only screen and (min-width: 350px) and (max-width: 768px) {
-    /*Responsiveness for smartphones*/
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+    /*Responsiveness for tablets portrait mode*/
     /*Removed landscape/portrait attributes since media query was taking effect at max-width greater than 768px*/
+
     html {
-        padding: 20px;
+        /*Reduce padding by 10px for each media query*/
+        padding: 5px;
+        background-color: green;
     }
 
     h1 {
-        font-size: 1.25rem;
+        /*Reduce font-size by 1.2 points per each media query*/
+        font-size: 3.6rem;
     }
-    
+
+    h2 {
+        /*Reduce font-size by 0.5 points per each media query*/
+        /*Reduce padding by 10px for each media query*/
+        font-size: 2.5rem;
+        padding-top: 20px;
+    }
+
+    h3 {
+        /*Reduce font-size by 0.2 points per each media query*/
+        /*Increase height by 5px per media query*/
+        font-size: 1.4rem;
+        height: 70px;
+    }
+
+    h4 {
+        /*Reduce font-size by 0.1 points per each media query*/
+        /*Increase height by 10px for each media query*/
+        font-size: 1.3rem;
+        height: 90px;
+        padding: 25px 5px;
+    }
+
     span {
-        font-size: 1rem; 
+        /*Reduce font-size by 0.5 points per each media query*/
+        font-size: 2.5rem;
     }
-    
+
     li span {
-        font-size:0.75rem;
+        /*Reduce font-size by 0.4 points per each media query*/
+        font-size: 1.8rem;
+    }
+
+    p {
+        /*Reduce font-size by 0.5 points per each media query*/
+        /*Reduce padding by 5px per each media query*/
+        padding: 15px 0;
+        font-size: 2rem;
+    }
+
+    footer p {
+        /*Reduce font-size by 0.1 points per each media query*/
+        /*Reduce margin by by 5px for each media query*/
+        margin: 5px auto 0 auto;
+        font-size: 1.3rem;
     }
 
     header {
         display: block;
         height: auto;
+    }
+
+    #web_title, #logo, nav {
+        margin: 10px 0 10px 0;
+    }
+
+    #web_title, nav {
+        text-align: center;
+    }
+
+    #logo {
+        /*Reduce width by 50px per each media query*/
+        margin: auto;
+        width: 70px;
+    }
+
+    #logo img, #logo img:hover {
+        border-width: 2px;
+    }
+
+    li {
+        margin: 0 auto 10px auto;
+    }
+
+    .beef_burgers, .chicken_burgers, .veggie_burgers {
+        padding: 10px 0 40px 0;
+    }
+
+    .beef, .chicken, .veggie {
+        width: 160px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /*Responsiveness for smartphones*/
+    /*Removed landscape/portrait attributes since media query was taking effect at max-width greater than 768px*/
+
+    html {
+        /*Reduce padding by 10px for each media query*/
+        padding: 5px;
+        background-color: blue;
+    }
+
+    h1 {
+        /*Reduce font-size by 1.2 points per each media query*/
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        /*Reduce font-size by 0.5 points per each media query*/
+        /*Reduce padding by 10px for each media query*/
+        font-size: 2rem;
+        padding-top: 10px;
+    }
+
+    h3 {
+        /*Reduce font-size by 0.2 points per each media query*/
+        font-size: 1.2rem;
+        height: 60px;
+    }
+
+    h4 {
+        /*Reduce font-size by 0.1 points per each media query*/
+        /*Increase height by 10px for each media query*/
+        font-size: 1.2rem;
+        height: 100px;
+        padding: 20px 5px;
+    }
+
+    span {
+        /*Reduce font-size by 0.5 points per each media query*/
+        font-size: 2rem;
+    }
+
+    li span {
+        /*Reduce font-size by 0.4 points per each media query*/
+        font-size: 1.4rem;
+    }
+
+    p {
+        /*Reduce font-size by 0.5 points per each media query*/
+        /*Reduce padding by 5px per each media query*/
+        padding: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        /*Reduce font-size by 0.1 points per each media query*/
+        margin: 5px auto 0 auto;
+        font-size: 1.2rem;
+    }
+
+    header {
+        display: block;
+        height: auto;
+    }
+
+    #web_title, #logo, nav {
+        margin: 5px 0 5px 0;
     }
 
     #web_title, nav {
@@ -359,10 +608,22 @@ main {
     #logo {
         margin: auto;
         width: 50px;
-        height: auto;
+    }
+
+    #logo img, #logo img:hover {
+        border-width: 2px;
     }
 
     li {
         margin: 0 auto 5px auto;
     }
+
+    .beef_burgers, .chicken_burgers, .veggie_burgers {
+        padding: 5px 0 20px 0;
+    }
+
+    .beef, .chicken, .veggie {
+        width: 140px;
+        margin: 10px;
+    } 
 }
